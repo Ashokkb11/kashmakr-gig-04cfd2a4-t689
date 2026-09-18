@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: kashmakr-gig-04cfd2a4-t689
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
